@@ -1,41 +1,18 @@
-import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  StatusBar,
-  Dimensions,
-  TouchableHighlight,
-  Button,
-  Alert,
-  Platform,
-  ImageBackground,
-} from "react-native";
-import {
-  useDimensions,
-  useDeviceOrientation,
-} from "@react-native-community/hooks";
+import React, { useState } from "react";
+import Screen from "./app/components/Screen";
+import { StyleSheet, Switch, TextInput } from "react-native";
 
 import "react-native-gesture-handler";
-
-import WelcomeScreen from "./app/screens/welcomeScreen";
-import ViewImageScreen from "./app/screens/viewImageScreen";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import AppText from "./app/components/AppText";
-import AppButton from "./app/components/AppButton";
-import Card from "./app/components/Card";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import AccountScreen from "./app/screens/AccountScreen";
-import Icon from "./app/components/Icon";
-
-const Stack = createStackNavigator();
+import AppTextInput from "./app/components/AppTextInput";
+import AppPicker from "./app/components/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
+const categories = [
+  { label: "Furniture", value: 1 },
+  { label: "Clothing", value: 2 },
+  { label: "Cameras", value: 3 },
+];
 
 export default function App() {
-  return <AccountScreen></AccountScreen>;
+  const [category, setCategory] = useState(categories[0]);
+  return <LoginScreen></LoginScreen>;
 }
