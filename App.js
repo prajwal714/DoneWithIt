@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Screen from "./app/components/Screen";
 import { StyleSheet, Switch, TextInput } from "react-native";
 
-import "react-native-gesture-handler";
 import AppTextInput from "./app/components/AppTextInput";
 import AppPicker from "./app/components/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
